@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@+id/schedule_fragment">
+
+    <fragment
+        android:id="@+id/schedule_fragment"
+        android:name="com.jeezer.messagescheduler.ui.schedule.ScheduleFragment"
+        android:label="@string/schedule_title"
+        tools:layout="@layout/fragment_schedule">
+
+        <action
+            android:id="@+id/action_schedule_fragment_to_message_fragment"
+            app:destination="@id/message_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/message_fragment"
+        android:name="com.jeezer.messagescheduler.ui.message.MessageFragment"
+        android:label="@string/message_title"
+        tools:layout="@layout/fragment_message">
+
+        <action
+            android:id="@+id/message_fragment_to_schedule_fragment"
+            app:destination="@id/schedule_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/account_fragment"
+        android:name="com.jeezer.messagescheduler.ui.account.AccountFragment"
+        android:label="@string/account_title"
+        tools:layout="@layout/fragment_account">
+
+        <action
+            android:id="@+id/account_fragment_to_schedule_fragment"
+            app:destination="@id/schedule_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+</navigation>
